@@ -1,0 +1,216 @@
+{
+  "projects": [
+    {
+      "id": 0,
+      "name": "Vigenere Cipher",
+      "image": "images/vigenere-cipher.jpg",
+      "techStack": [
+        "C++"
+      ],
+      "featured": false,
+      "description": "Keep things secret with a vigenere cipher"
+    },
+    {
+      "id": 1,
+      "name": "Malware Analysis Sandbox",
+      "image": "images/malware-analysis.jpg",
+      "techStack": [
+        "Flask",
+        "Python"
+      ],
+      "featured": false,
+      "description": "Suspicious file? Make sure it's safe and not malicious."
+    },
+    {
+      "id": 2,
+      "name": "Backup automation project",
+      "image": "images/automated-backup.jpg",
+      "techStack": [
+        "PowerShell"
+      ],
+      "featured": false,
+      "description": "Let NuCamp be your guide to this off-the-beaten-path, hike-in-only campground."
+    },
+    {
+      "id": 3,
+      "name": "Hackazon",
+      "image": "images/hackazon.jpg",
+      "techStack": [
+        "Burp Suite",
+        "mySQL",
+        "Php"
+      ],
+      "featured": true,
+      "description": "Test penetration testing skills with Hackazon."
+    }
+  ],
+  "comments": [
+    {
+      "id": 0,
+      "projectId": 0,
+      "rating": 5,
+      "text": "Very cool!",
+      "author": "Jane Hunt",
+      "date": "2025-10-25T16:30Z"
+    },
+    {
+      "id": 1,
+      "projectId": 0,
+      "rating": 3,
+      "text": "Thanks for sharing!",
+      "author": "Zandra Katherine",
+      "date": "2025-06-17T03:33Z"
+    },
+    {
+      "projectId": 3,
+      "rating": 5,
+      "text": "sfsa",
+      "author": "adfs",
+      "date": "2025-06-08T09:34:27.455Z",
+      "id": 28
+    },
+    {
+      "projectId": 1,
+      "rating": 4,
+      "text": "Really interesting project, I like the idea! It would be great to see some automation run weekly checks on new/unchecked files.",
+      "author": "Ben Gunter",
+      "date": "2025-06-10T07:28:42.887Z",
+      "id": 29
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "name": "Python",
+      "image": "images/python.png",
+      "featured": false,
+      "description": "Three years experience teaching Python. Primary scripting language for malware-analysis sandbox (Flask + VirusTotal API) and Kaggle dataset ETL; experienced with asyncio, Pandas, and type-hinting."
+    },
+    {
+      "id": 2,
+      "name": "C / C++",
+      "image": "images/c.png",
+      "featured": false,
+      "description": "Wrote cryptography labs (RSA, MD5-collision) and a CLI banking app that connects to SQL Server via ODBC; comfortable with pointers, memory management, and makefiles."
+    },
+    {
+      "id": 3,
+      "name": "Git & GitHub",
+      "image": "images/git-logo.png",
+      "featured": false,
+      "description": "Version-controlled projects (React site, malware sandbox, vigenere cipher) using Git flow and pull requests on GitHub; comfortable rebasing, resolving complex merge conflicts, and automating CI."
+    },
+    {
+      "id": 5,
+      "name": "Node.js & Express",
+      "image": "images/node-logo.png",
+      "featured": true,
+      "description": "Developed RESTful back-ends and a JSON-server mock API for Hackazon penetration-testing labs; implemented JWT auth, rate-limiting, and logging with Morgan and Winston."
+    },
+    {
+      "id": 6,
+      "name": "Docker",
+      "image": "images/docker1.png",
+      "featured": false,
+      "description": "From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered."
+    },
+    {
+      "id": 7,
+      "name": "Burp Suite",
+      "image": "images/burp-suite.png",
+      "featured": false,
+      "description": "Performed dynamic scans on the Hackazon e-commerce app, scripted Intruder attacks, and wrote custom BApp extensions to validate token misconfiguration findings."
+    },
+    {
+      "id": 8,
+      "name": "React + Redux",
+      "image": "images/react.png",
+      "featured": false,
+      "description": "Built this portfolio and a multi-user code-editor prototype with React hooks and Redux Toolkit; optimized slices, lazy-loaded routes, and wrote custom middleware for API status handling."
+    },
+    {
+      "id": 9,
+      "name": "Sqlmap",
+      "image": "images/sqlmap.png",
+      "featured": false,
+      "description": "Automated detection/ exploitation of SQLi in Hackazon's mobile API; exported PoCs."
+    },
+    {
+      "id": 10,
+      "name": "Bootstrap",
+      "image": "images/bootstrap-logo.png",
+      "featured": false,
+      "description": "Bootstrap Outfitters supplies you with the gear you need at prices you can't beat."
+    },
+    {
+      "id": 11,
+      "name": "Network & Security Tools",
+      "image": "images/network-tools.png",
+      "featured": false,
+      "description": "Daily driver: Nmap, Netdiscover, Wireshark, and OpenSSL for enumeration and packet analysis; studying toward CompTIA Network+ and Security+ certifications."
+    },
+    {
+      "id": 12,
+      "name": "SQL",
+      "image": "images/sql.png",
+      "featured": false,
+      "description": "Write complex queries, joins, and window functions in MySQL and SQL Server; designed normalized schemas and tuned indexes for a Flask-based malware-analysis dashboard."
+    },
+    {
+      "id": 13,
+      "name": "Linux",
+      "image": "images/linux.png",
+      "featured": false,
+      "description": "Daily driver for cybersecurity labs: configure Ubuntu/Kali boxes, automate tasks with Bash, manage services with systemd, and harden servers using iptables and Fail2Ban."
+    },
+    {
+      "id": 14,
+      "name": "PowerShell",
+      "image": "images/powershell.png",
+      "featured": false,
+      "description": "Authored scripts for a two-tier Windows backup: weekly full mirrors with Copy-Item and daily incrementals via Robocopy, all scheduled and logged automatically."
+    }
+  ],
+  "certifications": [
+    {
+      "id": 0,
+      "name": "B.S. in Computer Science (Cybersecurity)",
+      "image": "images/liberty.jpg",
+      "featured": true,
+      "description": "Liberty University, May 2025"
+    },
+    {
+      "id": 1,
+      "name": "Nucamp Full-Stack Web Development Bootcamp",
+      "image": "images/nucamp-logo.png",
+      "featured": false,
+      "description": "Completed July 2024 — Built full-stack apps with React, Node, Express & MongoDB"
+    },
+    {
+      "id": 2,
+      "name": "CompTIA Network+",
+      "image": "images/network-plus.png",
+      "featured": false,
+      "description": "In progress — exam expected July 2025"
+    },
+    {
+      "id": 3,
+      "name": "CompTIA Security+",
+      "image": "images/security-plus.png",
+      "featured": false,
+      "description": "Planned for Q4 2025"
+    }
+  ],
+  "feedback": [
+    {
+      "id": 0,
+      "firstname": "Test",
+      "lastname": "Test",
+      "phoneNum": "12345",
+      "email": "test@test.com",
+      "agree": true,
+      "contactType": "Email",
+      "feedback": "test"
+    }
+  ]
+}
