@@ -62,14 +62,6 @@
       "date": "2025-06-17T03:33Z"
     },
     {
-      "projectId": 3,
-      "rating": 5,
-      "text": "sfsa",
-      "author": "adfs",
-      "date": "2025-06-08T09:34:27.455Z",
-      "id": 28
-    },
-    {
       "projectId": 1,
       "rating": 4,
       "text": "Really interesting project, I like the idea! It would be great to see some automation run weekly checks on new/unchecked files.",
@@ -84,7 +76,7 @@
       "name": "Python",
       "image": "images/python.png",
       "featured": false,
-      "description": "Three years experience teaching Python. Primary scripting language for malware-analysis sandbox (Flask + VirusTotal API) and Kaggle dataset ETL; experienced with asyncio, Pandas, and type-hinting."
+      "description": "Three years of experience teaching Python. Primary scripting language for malware-analysis sandbox (Flask + VirusTotal API) and Kaggle dataset ETL; experienced with asyncio, Pandas, and type-hinting."
     },
     {
       "id": 2,
@@ -98,7 +90,7 @@
       "name": "Git & GitHub",
       "image": "images/git-logo.png",
       "featured": false,
-      "description": "Version-controlled projects (React site, malware sandbox, vigenere cipher) using Git flow and pull requests on GitHub; comfortable rebasing, resolving complex merge conflicts, and automating CI."
+      "description": "Version-controlled projects (React site, malware sandbox, Vigenere Cipher) using Git flow and pull requests on GitHub; comfortable rebasing, resolving complex merge conflicts, and automating CI."
     },
     {
       "id": 5,
