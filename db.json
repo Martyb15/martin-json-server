@@ -104,7 +104,7 @@
       "name": "Docker",
       "image": "images/docker1.png",
       "featured": false,
-      "description": "From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered."
+      "description": "Containerized malware-sandbox Flask app with multi-stage builds, non-root user execution, and health checks; configured docker-compose for local development with environment management, volume mounts, and resource limits."
     },
     {
       "id": 7,
