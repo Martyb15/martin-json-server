@@ -42,7 +42,20 @@
       ],
       "featured": true,
       "description": "Test penetration testing skills with Hackazon."
-    }
+    }, 
+    {
+      "id": 4,
+      "name": "Python Blockchain Ledger",
+      "image": "images/blockchain.jpg",
+      "techStack": [
+        "Python",
+        "FastAPI",
+        "WebSockets",
+        "ECDSA"
+      ],
+      "featured": false,
+      "description": "A from-scratch blockchain featuring PoW/PoS consensus, ECDSA-signed transactions, Merkle trees, and remittance escrow contracts with P2P networking."
+}
   ],
   "comments": [
     {
