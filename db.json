@@ -46,7 +46,7 @@
     {
       "id": 4,
       "name": "Python Blockchain Ledger",
-      "image": "images/blockchain.jpg",
+      "image": "images/blockchain.png",
       "techStack": [
         "Python",
         "FastAPI",
