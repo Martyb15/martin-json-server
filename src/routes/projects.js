@@ -1,4 +1,8 @@
 // GET /api/projects — all projects
+const router = require('express').Router();
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
+
 router.get('/', async (_req, res, next) => {
   try {
     const projects = await prisma.project.findMany({
