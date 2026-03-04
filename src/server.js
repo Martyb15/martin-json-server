@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3001;
 
 // ─── MIDDLEWARE ───
 app.use(helmet());                                   // Security headers
-app.use(cors({ origin: process.env.CLIENT_ORIGIN })); // Restrict to your frontend
+app.use(cors({origin: process.env.CLIENT_ORIGIN.split(','),})); // Restrict to your frontend
 app.use(morgan('dev'));                               // Request logging
 app.use(express.json());                              // Parse JSON bodies
 
