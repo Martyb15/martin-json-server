@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  # ─── PostgreSQL ───
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: martin
+      POSTGRES_PASSWORD: changeme
+      POSTGRES_DB: portfolio_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U martin -d portfolio_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ─── Express API ───
+  api:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    environment:
+      DATABASE_URL: "postgresql://martin:changeme@db:5432/portfolio_db?schema=public"
+      PORT: 3001
+      NODE_ENV: development
+      CLIENT_ORIGIN: "http://localhost:3000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  pgdata:
