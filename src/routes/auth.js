@@ -1,14 +1,14 @@
 const router = require('express').Router();
-const { Prisma } = require('@prisma/client');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const prisma = new Prisma.Client();
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
 
 // POST /api/auth/register — create a new admin (one-time use)
 router.post('/register', async (req, res, next) => {
     try {
         const { username, password } = req.body; 
-        if (!username || !passord) {
+        if (!username || !password) {
             return res.status(400).json({ error: 'Username and password required' }); 
         }
 
