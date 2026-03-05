@@ -45,15 +45,17 @@ router.get('/:id', async (req, res, next) => {
 // ---- ADMIN ROUTES (protected) ----
 
 // POST /api/projects/ - create a project
-try {
-  const { name, image, techStack, featured, description } = req.body; 
-  const project = await prisma.project.create({
-    data: { name, image, techStack, featured, description }
-  });
-  res.status(201).json(project); 
-} catch (err) {
-  next(err); 
-}
+router.post('/', auth, async (req, res, next) => {
+  try {
+    const { name, image, techStack, featured, description } = req.body;
+    const project = await prisma.project.create({
+      data: { name, image, techStack, featured, description }
+    });
+    res.status(201).json(project);
+  } catch (err) {
+    next(err);
+  }
+});
 
 // PUT /api/projects/:id - update a project
 router.put ('/:id', auth, async (req, res, next) => {
