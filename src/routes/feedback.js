@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
+const auth = require('../middleware/auth');
 
 // POST /api/feedback — submit contact form
 router.post('/', async (req, res, next) => {
@@ -31,7 +32,7 @@ router.post('/', async (req, res, next) => {
 
 // GET /api/feedback — list all feedback
 // TODO: protect with auth middleware once JWT is set up
-router.get('/', async (_req, res, next) => {
+router.get('/', auth, async (_req, res, next) => {
   try {
     const entries = await prisma.feedback.findMany({
       orderBy: { createdAt: 'desc' },

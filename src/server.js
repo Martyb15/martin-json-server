@@ -1,8 +1,10 @@
+const authRoutes = require('./routes/auth');
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
 require('dotenv').config();
+
 
 const projectRoutes = require('./routes/projects');
 const commentRoutes = require('./routes/comments');
@@ -14,10 +16,10 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // ─── MIDDLEWARE ───
-app.use(helmet());                                   // Security headers
+app.use(helmet());                                              // Security headers
 app.use(cors({origin: process.env.CLIENT_ORIGIN.split(','),})); // Restrict to your frontend
-app.use(morgan('dev'));                               // Request logging
-app.use(express.json());                              // Parse JSON bodies
+app.use(morgan('dev'));                                         // Request logging
+app.use(express.json());                                        // Parse JSON bodies
 
 // ─── ROUTES ───
 app.use('/api/projects', projectRoutes);
@@ -25,6 +27,7 @@ app.use('/api/comments', commentRoutes);
 app.use('/api/skills', skillRoutes);
 app.use('/api/certifications', certificationRoutes);
 app.use('/api/feedback', feedbackRoutes);
+app.use('api/auth', authRoutes); 
 
 // ─── HEALTH CHECK ───
 app.get('/api/health', (_req, res) => {

@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
+const auth = require('../middleware/auth');
 
 // GET /api/comments — all comments (optionally filter by projectId)
 router.get('/', async (req, res, next) => {
@@ -64,7 +65,7 @@ router.put('/:id', async (req, res, next) => {
 });
 
 // DELETE /api/comments/:id — delete a comment
-router.delete('/:id', async (req, res, next) => {
+router.delete('/:id', auth, async (req, res, next) => {
   try {
     await prisma.comment.delete({
       where: { id: parseInt(req.params.id) },
