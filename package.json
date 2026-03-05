@@ -2,7 +2,7 @@
   "name": "martinbarrios-api",
   "version": "1.0.0",
   "description": "Portfolio backend — Node/Express/PostgreSQL with Prisma",
-  "engine": {
+  "engines": {
     "node": "20.x"
   },
   "main": "src/server.js",
