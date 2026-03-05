@@ -5,7 +5,7 @@ const auth = (req, res, next) => {
     const header = req.headers.authorization;
 
     // 2. If there's no header or it doesn't start with "Bearer ", reject (401)
-    if (!header.startsWith('Bearer ')) {
+    if (!header ||!header.startsWith('Bearer ')) {
         return res.status(401).json({ error: 'No token provided' });
     }
 
@@ -18,7 +18,7 @@ const auth = (req, res, next) => {
         req.adminId = decoded.id // Attach the admin's Id to the request object for use in later middleware/routes
         next(); // Token is valid, proceed to the next middleware or route handler
     } catch (err) {
-        return res.status(401).json({ error: 'Invalid or expiredtoken' });
+        return res.status(401).json({ error: 'Invalid or expired token' });
     }
 }; 
 

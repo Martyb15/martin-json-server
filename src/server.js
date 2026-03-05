@@ -27,7 +27,7 @@ app.use('/api/comments', commentRoutes);
 app.use('/api/skills', skillRoutes);
 app.use('/api/certifications', certificationRoutes);
 app.use('/api/feedback', feedbackRoutes);
-app.use('api/auth', authRoutes); 
+app.use('/api/auth', authRoutes); 
 
 // ─── HEALTH CHECK ───
 app.get('/api/health', (_req, res) => {
