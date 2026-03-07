@@ -6,9 +6,11 @@ const prisma = new PrismaClient();
 const projects = [
   { id: 0, name: 'Vigenere Cipher', image: 'images/vigenere-cipher.jpg', techStack: ['C++'], featured: false, description: 'Keep things secret with a vigenere cipher' },
   { id: 1, name: 'Malware Analysis Sandbox', image: 'images/malware-analysis.jpg', techStack: ['Flask', 'Python'], featured: false, description: 'Suspicious file? Make sure it\'s safe and not malicious.' },
-  { id: 2, name: 'Backup automation project', image: 'images/automated-backup.jpg', techStack: ['PowerShell'], featured: false, description: 'Automate your backup workflow with PowerShell scripting.' },
+  { id: 2, name: 'Windows Server Backup Automation', image: 'images/automated-backup.jpg', techStack: ['PowerShell', 'Windows Server 2016', 'Robocopy', 'Task Scheduler'], featured: false, description: 'An automated two-tier backup system on Windows Server 2016 combining full and incremental PowerShell scripts with Task Scheduler. Uses robocopy /MIR for destination sync, rotating audit logs via stdout/stderr redirection, and a 7-day cadence (full Sun/Wed, incremental other days) that delivers ≤24-hour RPO on weekdays with zero manual intervention.' },
   { id: 3, name: 'Hackazon', image: 'images/hackazon.jpg', techStack: ['Burp Suite', 'mySQL', 'Php'], featured: true, description: 'Test penetration testing skills with Hackazon.' },
   { id: 4, name: 'Python Blockchain Ledger', image: 'images/blockchain.png', techStack: ['Python', 'FastAPI', 'WebSockets', 'ECDSA'], featured: false, description: 'A from-scratch blockchain featuring PoW/PoS consensus, ECDSA-signed transactions, Merkle trees, and remittance escrow contracts with P2P networking.' },
+  { id: 5, name: 'Hacker News Sort Verifier', image: 'images/playwright.jpg', techStack: ['Node.js', 'Playwright', 'JavaScript'], featured: false, description: 'A cross-platform Node.js/Playwright CLI that verifies Hacker News\' "newest" feed is sorted newest-to-oldest. Launches headless Chromium with isolated browser contexts, collects and validates 100 timestamps across paginated pages, handles navigation race conditions with Promise.all, and returns conventional exit codes (0/1) for CI/CD pipeline integration.' },
+  { id: 6, name: 'Healthcare Operations Database', image: 'images/hco-database.jpg', techStack: ['SQL Server', 'SSMS', 'T-SQL'], featured: false, description: 'A 26-table relational database and reporting layer in SQL Server modeling a full healthcare operation — patient intake, physician referrals, contracts, staffing schedules, supply inventory, and visit-level billing. Includes 36 advanced queries covering multi-table joins, CTEs, aggregation at different grains, and all outputs validated against benchmark results.' },
 ];
 
 const skills = [
@@ -22,9 +24,10 @@ const skills = [
   { id: 9,  name: 'Sqlmap',                image: 'images/sqlmap.png',        featured: false, description: 'Automated detection/exploitation of SQLi in Hackazon\'s mobile API; exported PoCs.' },
   { id: 10, name: 'Bootstrap',             image: 'images/bootstrap-logo.png',featured: false, description: 'Responsive layouts with Bootstrap grid, components, and utility classes across all portfolio pages.' },
   { id: 11, name: 'Network & Security Tools', image: 'images/network-tools.png', featured: false, description: 'Daily driver: Nmap, Netdiscover, Wireshark, and OpenSSL for enumeration and packet analysis; studying toward CompTIA Network+ and Security+.' },
-  { id: 12, name: 'SQL',                   image: 'images/sql.png',           featured: false, description: 'Write complex queries, joins, and window functions in MySQL and SQL Server; designed normalized schemas and tuned indexes for a Flask-based malware-analysis dashboard.' },
+  { id: 12, name: 'SQL',                   image: 'images/sql.png',           featured: false, description: 'Built a 26-table healthcare database with 36 validated queries in SQL Server; write complex joins, CTEs, and window functions in MySQL and SQL Server; designed normalized schemas and tuned indexes.' },
   { id: 13, name: 'Linux',                 image: 'images/linux.png',         featured: false, description: 'Daily driver for cybersecurity labs: configure Ubuntu/Kali boxes, automate tasks with Bash, manage services with systemd, and harden servers using iptables and Fail2Ban.' },
   { id: 14, name: 'PowerShell',            image: 'images/powershell.png',    featured: false, description: 'Authored scripts for a two-tier Windows backup: weekly full mirrors with Copy-Item and daily incrementals via Robocopy, all scheduled and logged automatically.' },
+  { id: 15, name: 'Playwright',            image: 'images/playwright.png',    featured: false, description: 'Built a Node.js/Playwright CLI to verify Hacker News sort order across 100 paginated timestamps; used isolated browser contexts, Locators with auto-wait, and conventional exit codes for CI/CD readiness.' },
 ];
 
 const certifications = [
