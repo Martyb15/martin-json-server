@@ -16,10 +16,16 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // ─── MIDDLEWARE ───
-app.use(helmet());                                              // Security headers
-app.use(cors({origin: process.env.CLIENT_ORIGIN.split(','),})); // Restrict to your frontend
-app.use(morgan('dev'));                                         // Request logging
-app.use(express.json());                                        // Parse JSON bodies
+app.use(helmet());                                   // Security headers
+// app.use(cors({ origin: process.env.CLIENT_ORIGIN })); // Restrict to your frontend
+app.use(morgan('dev'));                               // Request logging
+app.use(express.json());                              // Parse JSON bodies
+// Parse CLIENT_ORIGIN as a comma-separated list so both local and production  work
+const allowedOrigins = process.env.CLIENT_ORIGIN
+  ? process.env.CLIENT_ORIGIN.split(',').map(s => s.trim())
+  : [];
+
+app.use(cors({ origin: allowedOrigins }));
 
 // ─── ROUTES ───
 app.use('/api/projects', projectRoutes);
