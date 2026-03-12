@@ -32,7 +32,7 @@ const projects = [
       'Structured logging with per-upload latency metrics (hash_ms, total_ms) for operational KPIs',
       'Multi-stage Docker build with non-root execution and health checks',
     ],
-    repoUrl: 'https://github.com/Martyb15',
+    repoUrl: 'https://github.com/Martyb15/malware-sandbox-project',
   },
   {
     id: 2,
@@ -77,7 +77,7 @@ const projects = [
       'Merkle tree block integrity checks and cryptographic hash linkage',
       'pytest suite covering remittance escrow lifecycle, staking, PoS mining, and slashing',
     ],
-    repoUrl: 'https://github.com/Martyb15',
+    repoUrl: 'https://github.com/Martyb15/Blockchain',
   },
   {
     id: 5,
@@ -93,6 +93,7 @@ const projects = [
       'Handles navigation race conditions with Promise.all',
       'Conventional exit codes (0/1) for CI/CD pipeline integration',
     ],
+    repoUrl: 'https://github.com/Martyb15/qa-wolf-take-home',
   },
   {
     id: 6,
